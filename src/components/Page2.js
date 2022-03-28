@@ -1,5 +1,7 @@
 import React from 'react'
 import Header from './Header'
+import { Link } from 'react-router-dom'
+
 const Page2 = () => {
     return (
         <div className='center-container'>
@@ -9,10 +11,7 @@ const Page2 = () => {
                 <h3>you can always create another workspace later</h3>
             </div>
 
-            <form onSubmit={(e) => {
-                e.preventDefault()
-                window.location.pathname = "/page3"
-            }}>
+            <form >
                 <div id="form-division">
                     <label>
                         Workspace Name
@@ -23,11 +22,14 @@ const Page2 = () => {
                     </label>
 
                     <label id="domain-before" data-domain="www.eden.com/">
-                        <input id="form-input" placeholder='Example' style={{margin:'0px'}} />
+                        <input id="form-input" placeholder='Example' style={{ margin: '0px' }} />
                     </label>
 
                     <br />
-                    <input type='submit' value="Create Workspace" />
+                    <Link to="/page3">
+                        <input type='submit' value="Create Workspace" />
+                    </Link>
+
                 </div>
             </form>
         </div>

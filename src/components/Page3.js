@@ -3,6 +3,8 @@ import Header from './Header'
 import '../css/App.css'
 import userLogo from '../images/user-logo.png'
 import userLogo2 from '../images/user-logo2.png'
+import { Link } from 'react-router-dom'
+
 
 const Page3 = () => {
     return (
@@ -36,13 +38,14 @@ const Page3 = () => {
                 </label>
             </div>
 
-            <form onSubmit={(e) => {
-                e.preventDefault()
-                window.location.pathname = "/page4"
-            }}>
-                <input type='submit' value="Create Workspace" />
-            </form>
+            <form >
+                <div id="form-division">
 
+                    <Link to="/page4">
+                        <input type='submit' value="Create Workspace" />
+                    </Link>
+                </div >
+            </form>
         </div>
     )
 }
