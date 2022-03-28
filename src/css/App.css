@@ -1,0 +1,152 @@
+
+:root {
+    --primary-purple: rgb(102 77 229);;
+}
+*,body{
+    margin: 0px;
+    box-sizing: border-box;
+}  
+
+#root{
+    height: 100%;
+    position: relative;
+}
+.center-container{
+    position: relative;
+    top: 50%;
+    transform: translateY(20%);
+}
+.company-header{
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+.company-header img{
+
+    align-self: center;
+    margin-right: 10px;
+}
+
+.content-center{
+    text-align: center;
+    margin: 30px 0;
+}
+
+.content-center h3{
+    opacity: 40%;
+}
+
+.stepper-component{
+    width: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type=submit] {
+    background-color: var(--primary-purple);
+    padding: 10px;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+}
+
+input[type=submit]:hover {
+    background-color: var(--primary-purple);
+    opacity: 50%;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+form{
+    display: flex;
+    width: 30%;
+    margin: auto;
+}
+
+#form-division{
+    width:100%;
+}
+
+form label,form input{
+    display: block;
+    font-size: 20px;
+    width: 100%;
+    margin:10px 0px;
+}
+form input{
+    border-radius: solid 2px rgba(0,0,0,0.3);
+}
+.stepper-component > div > div > button.active:hover
+{
+    background-color: var(--primary-purple);
+}
+
+.stepper-component > div > div > button.active
+{
+    background-color: var(--primary-purple);
+}
+.stepper-component > div > div > button.completed
+{
+    background-color: var(--primary-purple);
+}
+
+#form-input{
+    padding: 10px 0px 10px 10px;
+    border: 2px solid rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+#domain-before{
+    display: flex;
+    width: 100%;
+}
+#domain-before::before{
+    content: attr(data-domain);
+    align-items: center;
+    display: flex;
+    background-color: #eceded;
+    top: 18px;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+span{
+    opacity: 0.5;
+}
+
+
+.myselect{
+    display: inline-block;
+    width: 200px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    height: 170px;
+    border-radius: 10px;
+    padding: 20px;
+
+}
+#checkboxes{
+    display: flex;
+    margin: auto;
+    width: 30%;
+    justify-content: space-evenly;
+}
+
+#checkboxes input[type=radio]{
+    display: none;
+}
+
+#checkboxes input[type=radio]:checked + .myselect{
+    border: 2px solid var(--primary-purple);
+
+}
+
+#tick{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
